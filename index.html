@@ -3,58 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Gül Zemin - Ekskluziw Güller</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Gül Zemin - Ekskluziw</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --main-color: #A67C52; /* Gold/Bronze */ --bg-color: #FFFDF9; /* Krem */ --text-color: #2C2C2C; --white: #FFFFFF; }
+        :root { --gold: #A67C52; --bg: #FFFDF9; --dark: #1A1A1A; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-        
-        /* Premium Header */
-        .header { background-color: var(--white); text-align: center; padding: 50px 20px; border-bottom: 1px solid #F0E6D6; position: relative; }
-        .header h1 { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--main-color); font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; animation: fadeInDown 1s ease; }
-        .header p { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 3px; font-weight: 300; animation: fadeInUp 1s ease 0.3s forwards; opacity: 0; }
-        
-        /* Banner */
-        .promo-banner { background-color: var(--main-color); color: var(--white); text-align: center; padding: 12px; font-size: 13px; letter-spacing: 1px; font-weight: 400; }
-
-        /* Ürün Konteyneri */
-        .container { padding: 30px 15px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-
-        /* Prestijli Ürün Kartı */
-        .item { background: var(--white); border-radius: 0px; /* Keskin köşeler daha prestijli durur */ overflow: hidden; box-shadow: 0 10px 30px rgba(166, 124, 82, 0.05); border: 1px solid #F0E6D6; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; animation: fadeInUp 0.8s ease forwards; }
-        .item:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(166, 124, 82, 0.1); }
-        .item-img-wrapper { width: 100%; height: 350px; overflow: hidden; position: relative; }
-        .item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .item:hover img { transform: scale(1.05); }
-        
-        /* Ürün Bilgisi */
-        .item-info { padding: 25px; text-align: center; }
-        .item-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text-color); font-weight: 500; margin-bottom: 8px; }
-        .item-info p { font-size: 13px; color: #777; margin-bottom: 15px; font-weight: 300; line-height: 1.6; }
-        .price { font-size: 24px; color: var(--main-color); font-weight: 600; display: block; margin-bottom: 20px; font-family: 'Poppins', sans-serif; }
-        
-        /* Lüks Buton */
-        .btn { display: inline-block; background-color: transparent; color: var(--main-color); text-decoration: none; padding: 12px 30px; border: 1px solid var(--main-color); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; cursor: pointer; width: 100%; }
-        .btn:hover { background-color: var(--main-color); color: var(--white); }
-        
-        /* İletişim Kısmı */
-        .contact-section { text-align: center; padding: 40px 20px; background-color: var(--white); border-top: 1px solid #F0E6D6; margin-top: 20px; }
-        .btn-call { background-color: var(--text-color); color: var(--white); border: none; margin-top: 10px; }
-        .btn-call:hover { background-color: #000; }
-
-        footer { text-align: center; padding: 30px; font-size: 11px; color: #AAA; letter-spacing: 1px; text-transform: uppercase; }
-
-        /* Animasyonlar */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Ürünlerin sırayla gelmesi için gecikme */
-        .item:nth-child(1) { animation-delay: 0.1s; }
-        .item:nth-child(2) { animation-delay: 0.2s; }
-        .item:nth-child(3) { animation-delay: 0.3s; }
-        /* Daha fazla ürün eklersen buraya nth-child(4), (5) ekleyebilirsin */
-
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--dark); line-height: 1.6; }
+        .header { background: #fff; text-align: center; padding: 40px 20px; border-bottom: 1px solid #eee; }
+        .header h1 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--gold); margin-bottom: 5px; }
+        .header p { font-size: 12px; letter-spacing: 3px; color: #999; text-transform: uppercase; }
+        .container { padding: 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .item { background: #fff; border: 1px solid #f0f0f0; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.02); transition: 0.3s; }
+        .item:hover { transform: translateY(-5px); }
+        .img-box { width: 100%; height: 350px; overflow: hidden; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .info { padding: 20px; text-align: center; }
+        .info h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+        .price { font-size: 20px; color: var(--gold); font-weight: 600; display: block; margin-bottom: 15px; }
+        /* Buton Grubu */
+        .btn-group { display: flex; gap: 8px; margin-top: 10px; }
+        .btn { flex: 1; text-decoration: none; padding: 12px 5px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; transition: 0.3s; text-align: center; }
+        .btn-whp { background-color: #25D366; color: white; }
+        .btn-imo { background-color: #2196F3; color: white; }
+        .btn:active { transform: scale(0.95); opacity: 0.8; }
+        footer { text-align: center; padding: 40px; font-size: 10px; color: #ccc; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -64,44 +36,40 @@
     <p>Premium Florist Boutique</p>
 </div>
 
-<div class="promo-banner">MARY BOÝUNÇA ELTIP BERMEK HYZMATY</div>
-
 <div class="container">
-    <div class="item">
-        <div class="item-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1561181286-d39736bae3bb?w=600" alt="101 Gül">
-        </div>
-        <div class="item-info">
-            <h3>Royal Red Roses</h3>
-            <p>101 sany iň ter, saýlama gyzyl güllerden ybarat bolan lüks buket.</p>
-            <span class="price">1200 TMT</span>
-            <a href="https://imo.im/_u/99362049500" class="btn">Sargyt Et</a>
-        </div>
-    </div>
-    <div class="item">
-        <div class="item-img-wrapper">
-            <img src=" https://i.imgur.com/7MKQXM0.jpeg photo-1526047932273-341f2a7631f9?w=600" alt="Liliya">
-        <div class="item-img-wrapper">
-            <img src="blob:https://i.imgur.com/72843e6a-32e5-4863-ba2d-2d0527d48643.jpg photo-1526047932273-341f2a7631f9?w=600" alt="Orkide">
-        <div class="item-img-wrapper">
-            <img src=" blob:https://i.imgur.com/2cab0b84-e366-4a93-aadf-e692e4ecfa27.jpg photo-1526047932273-341f2a7631f9?w=600" alt="ROSES">
-        </div>
-        <div class="item-info">
-            <h3>White Elegance</h3>
-            <p>Ak liliýalar we möwsum gülleri bilen taýýarlanylan nepis aranjirleme.</p>
-            <span class="price">450 TMT</span>
-            <a href="https://imo.im/_u/99365123456" class="btn">Sargyt Et</a>
-        </div>
-    </div>
-</div>
 
-<div class="contact-section">
-    <p style="color: #888; font-size: 13px; margin-bottom: 15px;">Soraglaryňyz barmy? Bize jaň ediň.</p>
-    <a href="tel:+99365123456" class="btn btn-call">📞 Jaň Etmek</a>
-</div>
+    <div class="item">
+        <div class="img-box">
+            <img src="blob:https://imgur.com/2cab0b84-e366-4a93-aadf-e692e4ecfa27.jpeg" alt="Gül Buketi">
+             <img src="blob:https://imgur.com/72843e6a-32e5-4863-ba2d-2d0527d48643.jpeg" alt="ROSES">
+            <img src="https://i.imgur.com/7MKQXM0.jpeg" alt="ORKİDE">
+        </div>
+        <div class="info">
+            <h3>Royal Red Roses</h3>
+            <span class="price">1200 TMT</span>
+            <div class="btn-group">
+                <a href="https://wa.me/99365XXXXXXX?text=Salam, men Royal Red Roses sargyt etmek isleýärin" class="btn btn-whp">WhatsApp</a>
+                <a href="https://imo.im/_u/99365XXXXXXX" class="btn btn-imo">IMO</a>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="img-box">
+            <img src="+++++" alt="Ak Güller">
+        </div>
+        <div class="info">
+            <h3>White Elegance</h3>
+            <span class="price">800 TMT</span>
+            <div class="btn-group">
+                <a href="https://wa.me/99365XXXXXXX?text=Salam, men White Elegance sargyt etmek isleýärin" class="btn btn-whp">WhatsApp</a>
+                <a href="https://imo.im/_u/99365XXXXXXX" class="btn btn-imo">IMO</a>
+            </div>
+        </div>
+    </div>
+    </div>
 
 <footer>
-    © 2026 Gül Zemin - Ählisinden iň gowusy
+    © 2026 GÜL ZEMIN - ÄHLISINDEN IŇ GOWUSY
 </footer>
 
 </body>
